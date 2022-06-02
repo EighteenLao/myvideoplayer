@@ -1,0 +1,14 @@
+article {
+  padding-bottom: 40px;
+}
+
+article .videoInfo {
+  background-color: #def4f4;
+  height: auto;
+  text-align: center;
+}
+
+article .videoInfo .container {
+  text-align: center;
+  padding: 10px 20px;
+}
