@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/article.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/nav.css">
 </head>
 
 <body>
@@ -24,43 +25,54 @@
                 MyVideoPlayer
               </a>
               <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-sm btn-outline-secondar" type="btn">login</button>
-              </form>
+                <button class="btn btn-outline-success" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+                <button class="btn btn-outline-success" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                    </svg>
+                </button>
+              </form>  
             </div>
-          </nav>
+        </nav>
     </header>
 
     <nav>
-        <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">All</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Animal</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Food</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Anime</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Game</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Movie</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Music</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">News</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Travel</a>
-            </li>
-          </ul>
+        <div class="navbarContainer">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">All</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Animal</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Food</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Anime</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Game</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Movie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Travel</a>
+                </li>
+              </ul>
+        </div>
     </nav>
       
     <article>
@@ -122,6 +134,19 @@
                 </div>
                 `);
             }*/
+
+            $(function() {
+			  $(window).scroll(function() {
+				if ($(this).scrollTop() > 100)  {          /* 要滑動到選單的距離 */
+				   $('header').addClass('headerFixed');   /* 幫選單加上固定效果 */
+                   $('.navbarContainer').addClass('navFixed');   /* 幫選單加上固定效果 */
+				} else {
+				  $('header').removeClass('headerFixed'); /* 移除選單固定效果 */ 
+                  $('.navbarContainer').removeClass('navFixed'); /* 移除選單固定效果 */   
+				}
+  
+			 });
+			});
         });
     </script>
     
