@@ -1,1 +1,1 @@
-[成果展示網址:] https://eighteenlao.github.io/myvideoplayer/index.html
+成果展示網址(直接點開連結即可): https://eighteenlao.github.io/myvideoplayer/index.html
